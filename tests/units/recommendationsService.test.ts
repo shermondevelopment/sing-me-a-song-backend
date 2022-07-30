@@ -94,4 +94,32 @@ describe('Recommendation', () => {
     })
   })
 
+  describe("get recommendations", () => {
+    it("get all recommendations", async () => {
+      const recommendations = [
+        {
+          id: 1,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 2,
+        },
+        {
+          id: 2,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 2,
+        },
+        {
+          id: 3,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 1,
+        },
+      ];
+      const findAll = jest.spyOn(recommendationRepository, "findAll").mockResolvedValueOnce(recommendations)
+      await recommendationService.get()
+      expect(findAll).toBeCalledTimes(1)
+    })
+  })
+
 })
