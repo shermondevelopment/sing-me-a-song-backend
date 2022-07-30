@@ -173,6 +173,28 @@ describe('Recommendation', () => {
       const result = await recommendationService.getRandom()
       expect(result.score).toEqual(recommendations[1].score)
     })
+
+    it("get random recommendation - 100% bellow/equal score 10", async () => {
+      const recommendations = [
+        {
+          id: 1,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 5,
+        },
+        {
+          id: 2,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 10,
+        }
+      ]
+      jest.spyOn(Math, "random").mockReturnValueOnce(0.9)
+      jest.spyOn(recommendationRepository, "findAll")
+      .mockResolvedValueOnce(recommendations)
+      const result = await recommendationService.getRandom()
+      expect(result).not.toBeNull()
+    })
   })
 
 })
