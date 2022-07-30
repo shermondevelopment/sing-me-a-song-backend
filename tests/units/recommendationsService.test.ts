@@ -84,6 +84,14 @@ describe('Recommendation', () => {
       await recommendationService.downvote(recommendation.id)
       expect(recommendationRepository.remove).toBeCalledTimes(1)
     })
+    it("should fail remove 1 point to recommendation score if id doesn't exist", async () => {
+      jest.spyOn(recommendationRepository, "find").mockResolvedValueOnce(null)
+
+      expect(recommendationService.upvote(100)).rejects.toEqual({
+        type: "not_found",
+        message: ""
+      })
+    })
   })
 
 })
