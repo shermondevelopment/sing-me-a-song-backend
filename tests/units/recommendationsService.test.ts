@@ -27,7 +27,7 @@ describe('Recommendation', () => {
     .mockResolvedValueOnce({ id: 1, ...recommendation, score: 0 })
     expect(recommendationService.insert(recommendation)).rejects.toEqual({
       type: "conflict",
-      message: "recommendations names must be unique"
+      message: "Recommendations names must be unique"
     })
   })
 
@@ -49,6 +49,16 @@ describe('Recommendation', () => {
     })
 
     it('should fail add 1 point to recommendation score if id doesn\'t exist', async () => {
+      jest.spyOn(recommendationRepository, "find").mockResolvedValueOnce(null)
+      expect(recommendationService.upvote(100)).rejects.toEqual({
+        type: 'not_found',
+        message: ''
+      })
+    })
+  })
+
+  describe("downvote recommendation", () => {
+    it("should remove 1 point to recomendaiton and delete recomnendation if score bellow -5", async () =>{
       jest.spyOn(recommendationRepository, "find").mockResolvedValueOnce(null)
       expect(recommendationService.upvote(100)).rejects.toEqual({
         type: 'not_found',
