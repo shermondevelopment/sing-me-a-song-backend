@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659201736309" clover="3.2.0">
-  <project timestamp="1659201736310" name="All files">
-    <metrics statements="63" coveredstatements="16" conditionals="27" coveredconditionals="0" methods="23" coveredmethods="1" elements="113" coveredelements="17" complexity="0" loc="63" ncloc="63" packages="4" files="4" classes="4"/>
+<coverage generated="1659202168697" clover="3.2.0">
+  <project timestamp="1659202168697" name="All files">
+    <metrics statements="63" coveredstatements="18" conditionals="27" coveredconditionals="4" methods="23" coveredmethods="2" elements="113" coveredelements="24" complexity="0" loc="63" ncloc="63" packages="4" files="4" classes="4"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="database.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\database.ts">
@@ -30,14 +30,14 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="32" coveredstatements="6" conditionals="6" coveredconditionals="0" methods="9" coveredmethods="1"/>
+      <metrics statements="32" coveredstatements="7" conditionals="6" coveredconditionals="1" methods="9" coveredmethods="1"/>
       <file name="recommendationsService.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\services\recommendationsService.ts">
-        <metrics statements="32" coveredstatements="6" conditionals="6" coveredconditionals="0" methods="9" coveredmethods="1"/>
+        <metrics statements="32" coveredstatements="7" conditionals="6" coveredconditionals="1" methods="9" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
@@ -68,9 +68,9 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="16" coveredstatements="6" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="16" coveredstatements="7" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
       <file name="errorUtils.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\utils\errorUtils.ts">
-        <metrics statements="16" coveredstatements="6" conditionals="20" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="7" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -80,7 +80,7 @@
         <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="20" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="27" count="1" type="stmt"/>
