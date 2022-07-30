@@ -30,4 +30,22 @@ describe('Recommendation', () => {
       message: "recommendations names must be unique"
     })
   })
+
+  describe('upvote recommendation', () => {
+    it('should add 1 point to recommendation score', async () => {
+      const recommendation = {
+        id: 1,
+        name: faker.lorem.words(3),
+        youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+        score: 5
+      }
+      jest.spyOn(recommendationRepository, "find")
+      .mockResolvedValueOnce(recommendation)
+      jest.spyOn(recommendationRepository, "updateScore")
+      .mockResolvedValueOnce({ ...recommendation, score: 6 })
+
+      await recommendationService.upvote(recommendation.id)
+      expect(recommendationRepository.updateScore).toBeCalledTimes(1)
+    })
+  })
 })
