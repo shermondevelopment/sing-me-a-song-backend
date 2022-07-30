@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659202618676" clover="3.2.0">
-  <project timestamp="1659202618676" name="All files">
-    <metrics statements="63" coveredstatements="23" conditionals="27" coveredconditionals="4" methods="23" coveredmethods="4" elements="113" coveredelements="31" complexity="0" loc="63" ncloc="63" packages="4" files="4" classes="4"/>
+<coverage generated="1659202849571" clover="3.2.0">
+  <project timestamp="1659202849572" name="All files">
+    <metrics statements="63" coveredstatements="24" conditionals="27" coveredconditionals="8" methods="23" coveredmethods="5" elements="113" coveredelements="37" complexity="0" loc="63" ncloc="63" packages="4" files="4" classes="4"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="database.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\database.ts">
@@ -30,23 +30,23 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="32" coveredstatements="12" conditionals="6" coveredconditionals="1" methods="9" coveredmethods="3"/>
+      <metrics statements="32" coveredstatements="12" conditionals="6" coveredconditionals="2" methods="9" coveredmethods="3"/>
       <file name="recommendationsService.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\services\recommendationsService.ts">
-        <metrics statements="32" coveredstatements="12" conditionals="6" coveredconditionals="1" methods="9" coveredmethods="3"/>
+        <metrics statements="32" coveredstatements="12" conditionals="6" coveredconditionals="2" methods="9" coveredmethods="3"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="11" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="40" count="1" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
@@ -68,9 +68,9 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="16" coveredstatements="7" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
+      <metrics statements="16" coveredstatements="8" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
       <file name="errorUtils.ts" path="C:\Users\Victor Shermon\projeto21-singmeasong\back-end\src\utils\errorUtils.ts">
-        <metrics statements="16" coveredstatements="7" conditionals="20" coveredconditionals="3" methods="6" coveredmethods="1"/>
+        <metrics statements="16" coveredstatements="8" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -82,7 +82,7 @@
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="24" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="31" count="1" type="stmt"/>
