@@ -128,6 +128,51 @@ describe('Recommendation', () => {
       await recommendationService.getTop(0)
       expect(getAmountByScore).toBeCalledTimes(1)
     })
+
+    it("get random recommendation - 30%", async () => {
+      const recommendations = [
+        {
+          id: 1,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 5,
+        },
+        {
+          id: 2,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 100,
+        }
+      ]
+      jest.spyOn(Math, "random").mockReturnValueOnce(0.9)
+      jest.spyOn(recommendationRepository, "findAll")
+      .mockResolvedValueOnce([recommendations[0]])
+      const result = await recommendationService.getRandom()
+      expect(result.score).toEqual(recommendations[0].score)
+    })
+
+    it("get random recommendation -70%", async () => {
+      const recommendations = [
+        {
+          id: 1,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 5,
+        },
+        {
+          id: 2,
+          name: faker.lorem.words(3),
+          youtubeLink: "https://www.youtube.com/watch?v=U0d0xpjCjWo",
+          score: 100,
+        }
+      ]
+      jest.spyOn(Math, "random").mockReturnValueOnce(0.5);
+      jest.spyOn(recommendationRepository, "findAll")
+      .mockResolvedValueOnce([recommendations[1]])
+
+      const result = await recommendationService.getRandom()
+      expect(result.score).toEqual(recommendations[1].score)
+    })
   })
 
 })
