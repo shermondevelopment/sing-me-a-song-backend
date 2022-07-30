@@ -19,7 +19,8 @@ FN:45,find
 FN:51,findByName
 FN:57,updateScore
 FN:66,remove
-FNF:8
+FN:72,deleteAll
+FNF:9
 FNH:0
 FNDA:0,create
 FNDA:0,findAll
@@ -29,6 +30,7 @@ FNDA:0,find
 FNDA:0,findByName
 FNDA:0,updateScore
 FNDA:0,remove
+FNDA:0,deleteAll
 DA:2,1
 DA:6,0
 DA:17,0
@@ -42,8 +44,10 @@ DA:52,0
 DA:58,0
 DA:67,0
 DA:72,1
-LF:13
-LH:2
+DA:73,0
+DA:77,1
+LF:15
+LH:3
 BRDA:36,0,0,0
 BRF:1
 BRH:0
@@ -59,8 +63,9 @@ FN:47,getTop
 FN:51,getRandom
 FN:64,getByScore
 FN:77,getScoreFilter
-FNF:9
-FNH:9
+FN:85,deleteAll
+FNF:10
+FNH:10
 FNDA:2,insert
 FNDA:4,upvote
 FNDA:1,downvote
@@ -70,6 +75,7 @@ FNDA:1,getTop
 FNDA:5,getRandom
 FNDA:5,getByScore
 FNDA:5,getScoreFilter
+FNDA:1,deleteAll
 DA:2,1
 DA:3,1
 DA:8,2
@@ -101,9 +107,10 @@ DA:74,1
 DA:78,5
 DA:79,1
 DA:82,4
-DA:85,1
-LF:32
-LH:32
+DA:86,1
+DA:90,1
+LF:33
+LH:33
 BRDA:11,0,0,1
 BRDA:31,1,0,1
 BRDA:38,2,0,3

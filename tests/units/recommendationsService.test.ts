@@ -231,4 +231,13 @@ describe('Recommendation', () => {
     })
   })
 
+  describe("delete all", () => {
+    it('delete all', async () => {
+      const deleteAll = jest.spyOn(recommendationRepository, "deleteAll")
+    .mockReturnThis()
+    await recommendationService.deleteAll()
+    expect(deleteAll).toBeCalledTimes(1)
+    })
+  })
+
 })
