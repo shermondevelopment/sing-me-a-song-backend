@@ -217,6 +217,18 @@ describe('Recommendation', () => {
       const result = await recommendationService.getRandom()
       expect(result).not.toBeNull()
     })
+
+    it("fail get random - not found", async () => {
+      const recommendation = []
+      jest.spyOn(Math, "random").mockReturnValueOnce(0.9);
+      jest.spyOn(recommendationRepository, "findAll")
+      .mockResolvedValue(recommendation)
+
+      return expect(recommendationService.getRandom()).rejects.toEqual({
+        type: "not_found",
+        message: ""
+      })
+    })
   })
 
 })
